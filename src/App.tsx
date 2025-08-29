@@ -23,9 +23,8 @@ export const App: React.FC = () => {
   const { wallets } = getDefaultWallets();
 
   const config = getDefaultConfig({
-    appName: "creci ens",
-    projectId:
-      import.meta.env.VITE_WALLETCONNECT_PROJECT_ID || "YOUR_PROJECT_ID",
+    appName: "Crecimiento",
+    projectId: import.meta.env.VITE_WALLETCONNECT_PROJECT_ID,
     wallets: [
       ...wallets,
       {
@@ -61,8 +60,8 @@ export const App: React.FC = () => {
     ],
     logo: "https://justaname-bucket.s3.eu-central-1.amazonaws.com/sun-black.png",
     color: {
-      primary: "hsl(216, 90%, 58%)",
-      background: "hsl(0, 0%, 100%)",
+      primary: "#FF5728",
+      background: "#F2F3E1",
       destructive: "hsl(0, 100%, 50%)",
     },
   };
@@ -74,9 +73,65 @@ export const App: React.FC = () => {
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider>
           <JustWeb3Provider config={justweb3Config}>
-            <JustWeb3Button>
-              <ConnectButton />
-            </JustWeb3Button>
+            <div className="app">
+              <header className="header">
+                <div className="header-content">
+                  <div className="logo">
+                    <h1>Crecimiento</h1>
+                    <span className="tagline">Building Argentina Onchain</span>
+                  </div>
+                  <div className="connect-wrapper">
+                    <JustWeb3Button>
+                      <ConnectButton />
+                    </JustWeb3Button>
+                  </div>
+                </div>
+              </header>
+
+              <main className="main">
+                <section className="hero">
+                  <div className="hero-content">
+                    <h2 className="hero-title">
+                      Connect with{" "}
+                      <span className="highlight">Crecimiento.eth</span>
+                    </h2>
+                    <p className="hero-description">
+                      Secure your ENS subname and join the movement bringing
+                      Argentina onchain. Connect your wallet to get started.
+                    </p>
+                  </div>
+                </section>
+
+                <section className="features">
+                  <div className="feature-grid">
+                    <div className="feature-card">
+                      <div className="feature-icon">🌟</div>
+                      <h3>Secure ENS</h3>
+                      <p>
+                        Get your crecimiento.eth subname with full security and
+                        ownership
+                      </p>
+                    </div>
+                    <div className="feature-card">
+                      <div className="feature-icon">🚀</div>
+                      <h3>Onchain Future</h3>
+                      <p>
+                        Be part of the movement bringing Argentina's innovation
+                        onchain
+                      </p>
+                    </div>
+                    <div className="feature-card">
+                      <div className="feature-icon">🤝</div>
+                      <h3>Community</h3>
+                      <p>
+                        Join builders, creators, and innovators shaping the
+                        future
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </main>
+            </div>
           </JustWeb3Provider>
         </RainbowKitProvider>
       </QueryClientProvider>
