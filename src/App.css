@@ -71,15 +71,16 @@ body {
 }
 
 .hero {
-  padding: 8rem 2rem;
+  padding: 6rem 2rem;
   text-align: center;
   background: linear-gradient(135deg, #F2F3E1 0%, #FFFFFF 100%);
-  min-height: 60vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -187,8 +188,8 @@ body {
   }
   
   .hero {
-    padding: 4rem 1.5rem;
-    min-height: 60vh;
+    padding: 3rem 1rem;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -197,18 +198,23 @@ body {
   .hero-content {
     width: 100%;
     max-width: 100%;
+    padding: 0;
   }
   
   .hero-title {
-    font-size: 2.75rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .hero-description {
-    font-size: 1.125rem;
-    margin-bottom: 2rem;
-    padding: 0 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .features {
@@ -231,8 +237,8 @@ body {
 
 @media (max-width: 480px) {
   .hero {
-    padding: 3rem 1rem;
-    min-height: 55vh;
+    padding: 2rem 1rem;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -240,18 +246,23 @@ body {
   
   .hero-content {
     width: 100%;
+    padding: 0;
   }
   
   .hero-title {
-    font-size: 2.25rem;
-    margin-bottom: 1.25rem;
-    line-height: 1.1;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .hero-description {
-    font-size: 1.125rem;
-    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
     line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .logo h1 {
@@ -277,19 +288,7 @@ body {
 
 @media (max-width: 320px) {
   .hero {
-    padding: 2rem 0.75rem;
-    min-height: 50vh;
-  }
-  
-  .hero-title {
-    font-size: 1.875rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-description {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    padding: 0 0.25rem;
+    display: none;
   }
   
   .header-content {
